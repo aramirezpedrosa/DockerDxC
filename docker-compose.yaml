@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  pruebaangular:
+    container_name: PruebaDxC
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '8080:4200'
